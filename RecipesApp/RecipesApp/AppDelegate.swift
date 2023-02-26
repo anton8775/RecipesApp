@@ -1,9 +1,3 @@
-//
-//  AppDelegate.swift
-//  RecipesApp
-//
-//  Created by Антон Яценко on 25.02.2023.
-//
 
 import UIKit
 
