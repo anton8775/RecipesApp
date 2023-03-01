@@ -12,6 +12,7 @@
 		D1180E4D29AABBF600DEF40E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1180E4C29AABBF600DEF40E /* WelcomeViewController.swift */; };
 		D1180E5229AABBF700DEF40E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1180E5129AABBF700DEF40E /* Assets.xcassets */; };
 		D1180E5529AABBF700DEF40E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1180E5329AABBF700DEF40E /* LaunchScreen.storyboard */; };
+		D11F7BB229AF915200DA020F /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11F7BB129AF915200DA020F /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		D1180E5129AABBF700DEF40E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1180E5429AABBF700DEF40E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1180E5629AABBF700DEF40E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D11F7BB129AF915200DA020F /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				D1180E4C29AABBF600DEF40E /* WelcomeViewController.swift */,
+				D11F7BB129AF915200DA020F /* LogInViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D11F7BB229AF915200DA020F /* LogInViewController.swift in Sources */,
 				D1180E4D29AABBF600DEF40E /* WelcomeViewController.swift in Sources */,
 				D1180E4929AABBF600DEF40E /* AppDelegate.swift in Sources */,
 				D1180E4B29AABBF600DEF40E /* SceneDelegate.swift in Sources */,
