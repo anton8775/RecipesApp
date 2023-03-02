@@ -24,15 +24,9 @@ class WelcomeViewController: UIViewController {
         let button = UIButton()
         button.setTitle("Get Started", for: .normal)
         button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 20)
         button.backgroundColor = .systemBlue
         button.layer.cornerRadius = 8
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
-    let logInButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Log In", for: .normal)
-        button.setTitleColor(.systemBlue, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -42,13 +36,14 @@ class WelcomeViewController: UIViewController {
         assignbackground()
         addSubviews()
         setConstraints()
+        
+        getStartedButton.addTarget(self, action: #selector(getStartedButtonTapped), for: .touchUpInside)
     }
 
     private func addSubviews(){
         view.addSubview(welcomeLabel)
         view.addSubview(subWelcomeLabel)
         view.addSubview(getStartedButton)
-        view.addSubview(logInButton)
     }
     
     private func setConstraints(){
@@ -60,13 +55,10 @@ class WelcomeViewController: UIViewController {
             subWelcomeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             subWelcomeLabel.widthAnchor.constraint(equalToConstant: 280),
             
-            getStartedButton.topAnchor.constraint(equalTo: subWelcomeLabel.bottomAnchor, constant: 110),
+            getStartedButton.topAnchor.constraint(equalTo: subWelcomeLabel.bottomAnchor, constant: 120),
             getStartedButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             getStartedButton.widthAnchor.constraint(equalToConstant: 340),
-            getStartedButton.heightAnchor.constraint(equalToConstant: 50),
-            
-            logInButton.topAnchor.constraint(equalTo: getStartedButton.bottomAnchor, constant: 12),
-            logInButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            getStartedButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     
@@ -81,6 +73,12 @@ class WelcomeViewController: UIViewController {
         imageView.center = view.center
         view.addSubview(imageView)
         self.view.sendSubviewToBack(imageView)
+    }
+    
+    @objc func getStartedButtonTapped(){
+        let categoryVC = CategoryViewController()
+        categoryVC.modalPresentationStyle = .fullScreen
+        present(categoryVC, animated: true)
     }
 }
 
