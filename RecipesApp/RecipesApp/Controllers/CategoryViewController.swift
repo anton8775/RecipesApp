@@ -1,7 +1,7 @@
 
 import UIKit
 
-class CategoryViewController: UIViewController {
+class CategoryViewController: UITabBarController {
     
     var categories = ["Sweet", "main"]
     let categoriesList = UITableView()
@@ -16,6 +16,11 @@ class CategoryViewController: UIViewController {
         categoriesList.delegate = self
         categoriesList.dataSource = self
         categoriesList.register(CategoryTableViewCell.self, forCellReuseIdentifier: CategoryTableViewCell.idn)
+        
+        let homeVC = HomeViewController()
+        let favoritesVC = FavoritesViewController()
+        
+        self.setViewControllers([homeVC, favoritesVC], animated: true)
     }
     
     private func addSubviews(){
@@ -29,7 +34,7 @@ class CategoryViewController: UIViewController {
             categoriesList.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
             categoriesList.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             categoriesList.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-            categoriesList.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+            categoriesList.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -60)
         ])
     }
 }
